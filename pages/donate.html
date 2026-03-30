@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate | Bloodworth Music Ministries</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/donate.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../index.html" aria-label="Bloodworth Music Ministries home">
+        <span class="brand__name">Bloodworth Music Ministries</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="../index.html#About">About</a></li>
+          <li><a class="site-nav__link site-nav__link--active" href="../pages/donate.html">Donate</a></li>
+          <li><a class="site-nav__link" href="../index.html#Contact">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="menu-button__bar"></span>
+        <span class="menu-button__bar"></span>
+        <span class="menu-button__bar"></span>
+      </button>
+    </div>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="../index.html#about">About</a></li>
+        <li><a class="mobile-menu__link" href="../pages/donate.html">Donate</a></li>
+        <li><a class="mobile-menu__link" href="../index.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- DONATE HERO -->
+    <section class="donate-hero" aria-labelledby="donate-hero-title">
+      <div class="container donate-hero__inner">
+        <div class="donate-hero__content">
+          <span class="eyebrow">Give with purpose</span>
+
+          <h1 class="donate-hero__title" id="donate-hero-title">
+            Support free music lessons that point students to Christ.
+          </h1>
+
+          <p class="donate-hero__text">
+            Your generosity helps provide music instruction, learning materials, and a Christ-centered environment where students are encouraged to grow in skill, confidence, and worship.
+          </p>
+
+          <div class="donate-hero__actions">
+            <a class="button button--primary" href="#donation-form">Give Now</a>
+            <!-- <a class="button button--ghost" href="#giving-impact">See Your Impact</a> -->
+          </div>
+        </div>
+
+        <aside class="donate-summary card card--accent">
+          <h2 class="card__title">Why your gift matters</h2>
+
+          <ul class="donate-summary__list">
+            <li>Helps keep lessons accessible to students at no cost</li>
+            <li>Supports instruments, materials, and ministry resources</li>
+            <li>Invests in students both musically and spiritually</li>
+          </ul>
+
+          <p class="donate-summary__note">
+            Every gift helps us continue using music as a way to teach, disciple, and glorify God.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- DONATION OPTIONS -->
+    <section class="section donate-options" id="donation-form" aria-labelledby="donation-form-title">
+      <div class="container">
+        <div class="donate-layout">
+          <div class="donate-form-card card">
+            <h2 class="section__title" id="donation-form-title">Make a Donation</h2>
+            <p class="section__subtitle">
+              Choose a one-time gift or monthly support. Donations are securely processed through Donorbox and Stripe.
+            </p>
+
+            <div class="donorbox-embed">
+              <dbox-widget
+                campaign="support-bloodworth-music-ministries"
+                type="donation_form"
+                enable-auto-scroll="true">
+              </dbox-widget>
+            </div>
+          </div>
+
+          <aside class="donate-sidebar">
+            <div class="card">
+              <h3 class="card__title">Your impact</h3>
+
+              <div class="impact-list" id="giving-impact">
+                <div class="impact-item">
+                  <span class="impact-item__amount">$10</span>
+                  <p class="impact-item__text">Helps support lesson materials and ministry supplies.</p>
+                </div>
+
+                <div class="impact-item">
+                  <span class="impact-item__amount">$25</span>
+                  <p class="impact-item__text">Helps a student continue learning in a Christ-centered environment.</p>
+                </div>
+
+                <div class="impact-item">
+                  <span class="impact-item__amount">$50</span>
+                  <p class="impact-item__text">Helps sponsor music instruction and needed learning resources.</p>
+                </div>
+
+                <div class="impact-item">
+                  <span class="impact-item__amount">$100</span>
+                  <p class="impact-item__text">Helps strengthen ongoing ministry support for students and families.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">Giving with confidence</h3>
+              <p>
+                Bloodworth Music Ministries is a registered 501(c)(3) nonprofit organization. Donations are intended to support the ministry’s mission and programs through its official nonprofit bank account.
+              </p>
+              <p>
+                A donation receipt and final donation processing details can be provided through the live giving platform once connected.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">Questions before giving?</h3>
+              <p>
+                If you would like to learn more about the ministry, partnership opportunities, or giving options, please visit our contact section.
+              </p>
+              <a class="button button--secondary" href="../index.html#contact">
+                Contact Us
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <small class="site-footer__copyright">
+        © <span id="year"></span> Bloodworth Music Ministries
+      </small>
+    </div>
+  </footer>
+
+  <script type="module" src="https://donorbox.org/widgets.js" async></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const menuButton = document.querySelector(".menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileLinks = document.querySelectorAll(".mobile-menu__link");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("is-open");
+      menuButton.classList.toggle("is-active", isOpen);
+      menuButton.setAttribute("aria-expanded", isOpen);
+      menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("is-open");
+        menuButton.classList.remove("is-active");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open menu");
+      });
+    });
+  </script>
+</body>
+</html>

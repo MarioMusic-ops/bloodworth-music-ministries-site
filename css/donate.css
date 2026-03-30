@@ -1,0 +1,223 @@
+/* =========================
+   DONATE PAGE STYLES
+   Bloodworth Music Ministries
+   ========================= */
+
+.donate-hero {
+  padding: 4.5rem 0 3rem;
+  background: linear-gradient(
+    135deg,
+    rgba(106, 27, 26, 0.08),
+    rgba(200, 169, 107, 0.08)
+  );
+}
+
+.donate-hero__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 420px);
+  gap: 2rem;
+  align-items: center;
+}
+
+.donate-hero__content {
+  max-width: 680px;
+}
+
+.donate-hero__title {
+  margin: 0.75rem 0 1rem;
+  line-height: 1.1;
+}
+
+.donate-hero__text {
+  max-width: 62ch;
+  margin-bottom: 1.5rem;
+}
+
+.donate-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.donate-summary {
+  align-self: stretch;
+}
+
+.donate-summary__list {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.donate-summary__note {
+  margin-top: 1rem;
+}
+
+/* Main donation section */
+.donate-options {
+  padding: 4rem 0 5rem;
+}
+
+.donate-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 360px);
+  gap: 2rem;
+  align-items: start;
+}
+
+.donate-form-card,
+.donate-sidebar .card,
+.donate-summary {
+  background: var(--white);
+  border: 1px solid rgba(106, 27, 26, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(47, 36, 48, 0.08);
+}
+
+.donate-form-card {
+  padding: 2rem;
+  min-width: 0;
+}
+
+.donate-sidebar {
+  display: grid;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+.donate-sidebar .card {
+  padding: 1.5rem;
+}
+
+.card--accent {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(231, 217, 200, 0.55)
+  );
+}
+
+/* Donorbox embed wrapper */
+.donorbox-embed {
+  margin-top: 1.5rem;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--white);
+}
+
+.donorbox-embed dbox-widget {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Helps embedded widget behave better inside grid/flex layouts */
+.donate-layout > * {
+  min-width: 0;
+}
+
+/* Impact sidebar */
+.impact-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.impact-item {
+  padding: 1rem 1rem 0.95rem;
+  background: rgba(250, 246, 242, 0.9);
+  border: 1px solid rgba(106, 27, 26, 0.1);
+  border-radius: 16px;
+}
+
+.impact-item__amount {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.05rem;
+}
+
+.impact-item__text {
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Buttons inside donate page */
+.donate-options .button,
+.donate-hero .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Better spacing for titles */
+.donate-options .section__title,
+.donate-sidebar .card__title,
+.donate-summary .card__title {
+  margin-top: 0;
+  margin-bottom: 0.85rem;
+}
+
+.donate-options .section__subtitle,
+.donate-sidebar p,
+.donate-summary p,
+.donate-summary li {
+  line-height: 1.65;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .donate-hero__inner,
+  .donate-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .donate-hero__content,
+  .donate-summary,
+  .donate-form-card,
+  .donate-sidebar {
+    max-width: 100%;
+  }
+
+  .donate-summary {
+    max-width: 680px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .donate-hero {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .donate-options {
+    padding: 3rem 0 4rem;
+  }
+
+  .donate-form-card {
+    padding: 1.25rem;
+  }
+
+  .donate-sidebar .card {
+    padding: 1.2rem;
+  }
+
+  .donate-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .donate-hero__actions .button,
+  .donate-sidebar .button {
+    width: 100%;
+  }
+}
