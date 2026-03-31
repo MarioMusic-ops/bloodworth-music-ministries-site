@@ -409,6 +409,21 @@ a {
   overflow-wrap: normal;
 }
 
+.logo-card__link {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+}
+
+.logo-card__link:hover .logo-card__name,
+.logo-card__link:focus-visible .logo-card__name {
+  color: var(--primary);
+}
+
 @media (max-width: 700px) {
   .logo-grid {
     grid-template-columns: 1fr;
