@@ -367,11 +367,14 @@ a {
 }
 
 .logo-card__logo {
-  width: 90px;
-  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  width: 100%;
   border-radius: 20px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  opacity: 0.22;
+  background: transparent;
+  opacity: 1;
 }
 
 .logo-card__name {
