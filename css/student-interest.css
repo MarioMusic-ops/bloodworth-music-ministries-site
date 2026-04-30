@@ -175,12 +175,19 @@ a{
   background: var(--surface-2);
 }
 
-.form-wrap iframe{
+.form-wrap iframe,
+.form-wrap .language-iframe {
   display: block;
   width: 100%;
+  max-width: 100%;
   min-height: 1700px;
   border: 0;
   background: #ffffff;
+}
+
+.language-iframe {
+  width: 100% !important;
+  min-height: 1700px !important;
 }
 
 .support-note{
