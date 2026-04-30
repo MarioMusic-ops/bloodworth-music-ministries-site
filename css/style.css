@@ -151,6 +151,8 @@ a {
   border-radius: 999px;
   font-weight: 700;
   color: var(--secondary);
+  text-align: center;
+  line-height: 1.2;
   transition: background-color 160ms ease, color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
 
@@ -159,6 +161,40 @@ a {
   background: rgba(106, 27, 26, 0.08);
   color: var(--primary);
   transform: translateY(-1px);
+}
+
+/* Language Toggle */
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 2px solid rgba(106, 27, 26, 0.18);
+  background: var(--white);
+  color: var(--primary);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.language-toggle:hover,
+.language-toggle:focus-visible {
+  background: rgba(106, 27, 26, 0.08);
+  color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(106, 27, 26, 0.10);
+}
+
+.language-toggle--mobile {
+  width: 100%;
+  border-radius: 14px;
+  justify-content: center;
+  background: rgba(200, 169, 107, 0.14);
+  border-color: rgba(200, 169, 107, 0.55);
+  color: var(--secondary);
 }
 
 /* Hamburger */
