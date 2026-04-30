@@ -14,32 +14,156 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="../css/student-interest.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/student-interest.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Bloodworth Music Ministries home">
-        <span class="brand__name">Bloodworth Music Ministries</span>
-      </a>
+  <!-- HEADER -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="../index.html" aria-label="Bloodworth Music Ministries home">
+      <span class="brand__name">Bloodworth Music Ministries</span>
+    </a>
 
-      <nav class="header-nav" aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-        <a href="../index.html#About">About</a>
-        <a href="../index.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul class="site-nav__list">
+        <li>
+          <a class="site-nav__link" href="../index.html#about" data-en="About" data-es="Acerca de">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a class="site-nav__link" href="../pages/donate.html" data-en="Donate" data-es="Donar">
+            Donate
+          </a>
+        </li>
+
+        <li>
+          <a class="site-nav__link" href="../index.html#contact" data-en="Contact Us" data-es="Contáctenos">
+            Contact Us
+          </a>
+        </li>
+
+        <li>
+          <a class="site-nav__link" href="../pages/donate-instrument.html" data-en="Donate Instrument" data-es="Donar Instrumento">
+            Donate Instrument
+          </a>
+        </li>
+
+        <li>
+          <a class="site-nav__link site-nav__link--active" href="../pages/student-interest.html" data-en="Apply" data-es="Aplicar">
+            Apply
+          </a>
+        </li>
+
+        <li>
+          <button
+            class="language-toggle"
+            id="languageToggle"
+            type="button"
+            aria-label="Switch to Spanish"
+          >
+            Español
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="menu-button__bar"></span>
+      <span class="menu-button__bar"></span>
+      <span class="menu-button__bar"></span>
+    </button>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <ul class="mobile-menu__list">
+      <li>
+        <a class="mobile-menu__link" href="../index.html#about" data-en="About" data-es="Acerca de">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a class="mobile-menu__link" href="../pages/donate.html" data-en="Donate" data-es="Donar">
+          Donate
+        </a>
+      </li>
+
+      <li>
+        <a class="mobile-menu__link" href="../index.html#contact" data-en="Contact Us" data-es="Contáctenos">
+          Contact Us
+        </a>
+      </li>
+
+      <li>
+        <a class="mobile-menu__link" href="../pages/donate-instrument.html" data-en="Donate Instrument" data-es="Donar Instrumento">
+          Donate Instrument
+        </a>
+      </li>
+
+      <li>
+        <a class="mobile-menu__link" href="../pages/student-interest.html" data-en="Apply" data-es="Aplicar">
+          Apply
+        </a>
+      </li>
+
+      <li>
+        <button
+          class="language-toggle language-toggle--mobile"
+          id="mobileLanguageToggle"
+          type="button"
+          aria-label="Switch to Spanish"
+        >
+          Español
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
 
   <main>
     <section class="hero">
       <div class="container hero-inner">
-        <p class="eyebrow">Student Programs</p>
-        <h1>Student Application Form</h1>
-        <p class="hero-text">
-          Thank you for your interest in our music program. Please complete this form so we can learn more about the student and determine whether our current offerings may be a good fit. We aim to serve students who are ready to grow through consistent learning and ongoing participation.
-        </p>
-        <a class="hero-button" href="#student-form">Go to Student Form</a>
+        <p
+  class="eyebrow"
+  data-en="Student Programs"
+  data-es="Programas para Estudiantes"
+>
+  Student Programs
+</p>
+
+<h1
+  data-en="Student Application Form"
+  data-es="Formulario de Solicitud para Estudiantes"
+>
+  Student Application Form
+</h1>
+
+<p
+  class="hero-text"
+  data-en="Thank you for your interest in our music program. Please complete this form so we can learn more about the student and determine whether our current offerings may be a good fit. We aim to serve students who are ready to grow through consistent learning and ongoing participation."
+  data-es="Gracias por su interés en nuestro programa de música. Por favor complete este formulario para que podamos conocer más sobre el estudiante y determinar si nuestras clases actuales pueden ser una buena opción. Nuestro objetivo es servir a estudiantes que estén listos para crecer por medio del aprendizaje constante y la participación continua."
+>
+  Thank you for your interest in our music program. Please complete this form so we can learn more about the student and determine whether our current offerings may be a good fit. We aim to serve students who are ready to grow through consistent learning and ongoing participation.
+</p>
+
+<a
+  class="hero-button"
+  href="#student-form"
+  data-en="Go to Student Form"
+  data-es="Ir al Formulario de Estudiante"
+>
+  Go to Student Form
+</a>
       </div>
     </section>
 
@@ -47,34 +171,146 @@
       <div class="container">
         <div class="section-card">
           <div class="section-copy">
-            <h2>Music Program Student Application Form</h2>
-            <p>
-              Please complete the form below with as much detail as possible. A
-              member of our team will review your submission and follow up with
-              next steps as availability allows.
-            </p>
-          </div>
+  <h2
+    data-en="Music Program Student Application Form"
+    data-es="Formulario de Solicitud para el Programa de Música"
+  >
+    Music Program Student Application Form
+  </h2>
+
+  <p
+    data-en="Please complete the form below with as much detail as possible. A member of our team will review your submission and follow up with next steps as availability allows."
+    data-es="Por favor complete el formulario a continuación con la mayor cantidad de detalles posible. Un miembro de nuestro equipo revisará su envío y se comunicará con usted con los próximos pasos según la disponibilidad."
+  >
+    Please complete the form below with as much detail as possible. A
+    member of our team will review your submission and follow up with
+    next steps as availability allows.
+  </p>
+</div>
 
           <div class="form-wrap">
             <iframe
-              title="Music Program Student Interest Form"
-              src="https://form.jotform.com/260882134311046"
-              loading="lazy"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
+  class="language-iframe"
+  title="Music Program Student Interest Form"
+  src="https://form.jotform.com/260882134311046"
+  data-src-en="https://form.jotform.com/260882134311046"
+  data-src-es="https://form.jotform.com/261185469304157"
+  loading="lazy"
+  frameborder="0"
+  allowfullscreen
+></iframe>
           </div>
 
           <div class="support-note">
-            <h3>Questions before applying?</h3>
-            <p>
-              If you have questions about student placement, age groups, or
-              general program availability,<br>Please contact: bloodworthmusic@proton.me
-            </p>
-          </div>
+  <h3
+    data-en="Questions before applying?"
+    data-es="¿Preguntas antes de solicitar?"
+  >
+    Questions before applying?
+  </h3>
+
+  <p>
+    <span
+      data-en="If you have questions about student placement, age groups, or general program availability,"
+      data-es="Si tiene preguntas sobre la colocación del estudiante, grupos de edad o disponibilidad general del programa,"
+    >
+      If you have questions about student placement, age groups, or general program availability,
+    </span>
+    <br>
+    <span
+      data-en="Please contact:"
+      data-es="Por favor comuníquese con:"
+    >
+      Please contact:
+    </span>
+    bloodworthmusic@proton.me
+  </p>
+</div>
         </div>
       </div>
     </section>
   </main>
+  <script>
+  const menuButton = document.querySelector(".menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileLinks = document.querySelectorAll(".mobile-menu__link");
+
+  const languageToggle = document.getElementById("languageToggle");
+  const mobileLanguageToggle = document.getElementById("mobileLanguageToggle");
+  const translatableElements = document.querySelectorAll("[data-en][data-es]");
+  const languageIframes = document.querySelectorAll("[data-src-en][data-src-es]");
+
+  function setLanguage(language) {
+    translatableElements.forEach((element) => {
+      const translatedText = element.getAttribute(`data-${language}`);
+
+      if (translatedText) {
+        element.textContent = translatedText;
+      }
+    });
+
+    languageIframes.forEach((iframe) => {
+      const newSrc = iframe.getAttribute(`data-src-${language}`);
+
+      if (newSrc && iframe.src !== newSrc) {
+        iframe.src = newSrc;
+      }
+    });
+
+    document.documentElement.lang = language === "es" ? "es" : "en";
+    localStorage.setItem("siteLanguage", language);
+
+    const nextLabel = language === "es" ? "English" : "Español";
+    const ariaLabel = language === "es" ? "Switch to English" : "Switch to Spanish";
+
+    if (languageToggle) {
+      languageToggle.textContent = nextLabel;
+      languageToggle.setAttribute("aria-label", ariaLabel);
+    }
+
+    if (mobileLanguageToggle) {
+      mobileLanguageToggle.textContent = nextLabel;
+      mobileLanguageToggle.setAttribute("aria-label", ariaLabel);
+    }
+  }
+
+  function toggleLanguage() {
+    const currentLanguage = localStorage.getItem("siteLanguage") || "en";
+    const newLanguage = currentLanguage === "en" ? "es" : "en";
+    setLanguage(newLanguage);
+  }
+
+  if (languageToggle) {
+    languageToggle.addEventListener("click", toggleLanguage);
+  }
+
+  if (mobileLanguageToggle) {
+    mobileLanguageToggle.addEventListener("click", toggleLanguage);
+  }
+
+  const savedLanguage = localStorage.getItem("siteLanguage") || "en";
+  setLanguage(savedLanguage);
+
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("is-open");
+
+      menuButton.classList.toggle("is-active", isOpen);
+      menuButton.setAttribute("aria-expanded", isOpen);
+      menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    });
+  }
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (mobileMenu && menuButton) {
+        mobileMenu.classList.remove("is-open");
+        menuButton.classList.remove("is-active");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open menu");
+      }
+    });
+  });
+</script>
 </body>
 </html>
