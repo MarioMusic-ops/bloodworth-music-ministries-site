@@ -174,6 +174,64 @@
   line-height: 1.65;
 }
 
+/* Musical impact poster section */
+.donation-poster-section {
+  padding: 3.5rem 0 3rem;
+  background: rgba(250, 246, 242, 0.65);
+}
+
+.donation-poster-intro {
+  max-width: 760px;
+  margin: 0 auto 1.75rem;
+  text-align: center;
+}
+
+.donation-poster-intro .section__title {
+  margin-top: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.donation-poster-intro .section__subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 68ch;
+}
+
+.donation-poster-card {
+  width: min(100%, 560px);
+  margin: 0 auto;
+  padding: 0.75rem;
+  background: var(--white);
+  border: 1px solid rgba(106, 27, 26, 0.14);
+  border-radius: 22px;
+  box-shadow: 0 16px 38px rgba(47, 36, 48, 0.1);
+}
+
+.donation-poster-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.donation-poster-cta {
+  max-width: 720px;
+  margin: 1.5rem auto 0;
+  text-align: center;
+}
+
+.donation-poster-cta p {
+  margin: 0 auto 1rem;
+  max-width: 62ch;
+  line-height: 1.65;
+}
+
+.donation-poster-cta .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
   .donate-hero__inner,
@@ -197,6 +255,52 @@
 @media (max-width: 768px) {
   .donate-hero {
     padding: 3.5rem 0 2.5rem;
+  }
+
+  .donate-options {
+    padding: 3rem 0 4rem;
+  }
+
+  .donate-form-card {
+    padding: 1.25rem;
+  }
+
+  .donate-sidebar .card {
+    padding: 1.2rem;
+  }
+
+  .donate-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .donate-hero__actions .button,
+  .donate-sidebar .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .donate-hero {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .donation-poster-section {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .donation-poster-card {
+    width: min(100%, 420px);
+    padding: 0.5rem;
+    border-radius: 18px;
+  }
+
+  .donation-poster-card__image {
+    border-radius: 13px;
+  }
+
+  .donation-poster-cta .button {
+    width: 100%;
   }
 
   .donate-options {
