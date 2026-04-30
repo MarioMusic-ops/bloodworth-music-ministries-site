@@ -10,63 +10,147 @@
 
 <body>
   <!-- HEADER -->
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="brand" href="#top" aria-label="Bloodworth Music Ministries home">
-        <span class="brand__name">Bloodworth Music Ministries</span>
-      </a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="#top" aria-label="Bloodworth Music Ministries home">
+      <span class="brand__name">Bloodworth Music Ministries</span>
+    </a>
 
-      <nav class="site-nav" aria-label="Primary navigation">
-        <ul class="site-nav__list">
-          <li><a class="site-nav__link" href="#about">About</a></li>
-          <li><a class="site-nav__link" href="./pages/donate.html">Donate</a></li>
-          <li><a class="site-nav__link" href="#contact">Contact Us</a></li>
-          <li><a class="site-nav__link" href="./pages/donate-instrument.html">Donate Instrument</a></li>
-          <li><a class="site-nav__link" href="pages/student-interest.html">Apply</a></li>
-        </ul>
-      </nav>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul class="site-nav__list">
+        <li>
+          <a class="site-nav__link" href="#about" data-en="About" data-es="Acerca de">
+            About
+          </a>
+        </li>
 
-      <button
-        class="menu-button"
-        type="button"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <span class="menu-button__bar"></span>
-        <span class="menu-button__bar"></span>
-        <span class="menu-button__bar"></span>
-      </button>
-    </div>
+        <li>
+          <a class="site-nav__link" href="./pages/donate.html" data-en="Donate" data-es="Donar">
+            Donate
+          </a>
+        </li>
+
+        <li>
+          <a class="site-nav__link" href="#contact" data-en="Contact Us" data-es="Contáctenos">
+            Contact Us
+          </a>
+        </li>
+
+        <li>
+          <a class="site-nav__link" href="./pages/donate-instrument.html" data-en="Donate Instrument" data-es="Donar Instrumento">
+            Donate Instrument
+          </a>
+        </li>
+
+        <li>
+          <a class="site-nav__link" href="pages/student-interest.html" data-en="Apply" data-es="Aplicar">
+            Apply
+          </a>
+        </li>
+
+        <li>
+          <button
+            class="language-toggle"
+            id="languageToggle"
+            type="button"
+            aria-label="Switch to Spanish"
+          >
+            Español
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="menu-button__bar"></span>
+      <span class="menu-button__bar"></span>
+      <span class="menu-button__bar"></span>
+    </button>
+  </div>
 
     <!-- MOBILE MENU -->
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
       <ul class="mobile-menu__list">
-        <li><a class="mobile-menu__link" href="#about">About</a></li>
-        <li><a class="mobile-menu__link" href="./pages/donate.html">Donate</a></li>
-        <li><a class="mobile-menu__link" href="#contact">Contact Us</a></li>
-        <li><a class="mobile-menu__link" href="./pages/donate-instrument.html">Donate Instrument</a></li>
-        <li><a class="mobile-menu__link" href="./pages/student-interest.html">Apply</a></li>
-      </ul>
+  <li>
+  <a class="mobile-menu__link" href="#about" data-en="About" data-es="Acerca de">
+    About
+  </a>
+</li>
+
+<li>
+  <a class="mobile-menu__link" href="./pages/donate.html" data-en="Donate" data-es="Donar">
+    Donate
+  </a>
+</li>
+
+<li>
+  <a class="mobile-menu__link" href="#contact" data-en="Contact Us" data-es="Contáctenos">
+    Contact Us
+  </a>
+</li>
+
+<li>
+  <a class="mobile-menu__link" href="./pages/donate-instrument.html" data-en="Donate Instrument" data-es="Donar Instrumento">
+    Donate Instrument
+  </a>
+</li>
+
+<li>
+  <a class="mobile-menu__link" href="./pages/student-interest.html" data-en="Apply" data-es="Aplicar">
+    Apply
+  </a>
+</li>
+
+  <li>
+    <button
+      class="language-toggle language-toggle--mobile"
+      id="mobileLanguageToggle"
+      type="button"
+      aria-label="Switch to Spanish"
+    >
+      Español
+    </button>
+  </li>
+</ul>
     </nav>
   </header>
 
   <main id="top">
     <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__inner">
-        <div class="hero__content">
-          <h1 class="hero__title" id="hero-title">
-            Our mission is to provide musical lessons for free while teaching students to praise the Lord.
-          </h1>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__inner">
+    <div class="hero__content">
+      <h1
+        class="hero__title"
+        id="hero-title"
+        data-en="Our mission is to provide musical lessons for free while teaching students to praise the Lord."
+        data-es="Nuestra misión es ofrecer clases de música gratis mientras enseñamos a los estudiantes a alabar al Señor."
+      >
+        Our mission is to provide musical lessons for free while teaching students to praise the Lord.
+      </h1>
 
-          <p class="hero__subtitle">
-            Learn an instrument, grow in skill, and use music to glorify God, all in a welcoming, encouraging environment.
-          </p>
+      <p
+        class="hero__subtitle"
+        data-en="Learn an instrument, grow in skill, and use music to glorify God, all in a welcoming, encouraging environment."
+        data-es="Aprende un instrumento, crece en habilidad y usa la música para glorificar a Dios en un ambiente acogedor y de ánimo."
+      >
+        Learn an instrument, grow in skill, and use music to glorify God, all in a welcoming, encouraging environment.
+      </p>
 
-          <a class="button button--primary" href="./pages/student-interest.html">
-            Apply to Become a Student
-          </a>
+      <a
+        class="button button--primary"
+        href="./pages/student-interest.html"
+        data-en="Apply to Become a Student"
+        data-es="Solicitar ser estudiante"
+      >
+        Apply to Become a Student
+      </a>
 
           <div class="anchor" id="schedule" aria-hidden="true"></div>
         </div>
@@ -84,21 +168,38 @@
     <!-- ABOUT -->
     <section class="section about" id="about" aria-labelledby="about-title">
       <div class="container">
-        <h2 class="section__title" id="about-title">
-          About Bloodworth Music Ministries
-        </h2>
+        <h2
+  class="section__title"
+  id="about-title"
+  data-en="About Bloodworth Music Ministries"
+  data-es="Acerca de Bloodworth Music Ministries"
+>
+  About Bloodworth Music Ministries
+</h2>
 
         <div class="two-col">
           <div class="card">
+            <p
+  data-en="We exist to provide students with the opportunity to learn music in a Christ-centered environment, regardless of their financial situation. We believe that every student with a desire to learn should be given the chance to grow, develop their gifts, and use them for God’s glory."
+  data-es="Existimos para brindar a los estudiantes la oportunidad de aprender música en un ambiente centrado en Cristo, sin importar su situación económica. Creemos que todo estudiante con el deseo de aprender debe tener la oportunidad de crecer, desarrollar sus dones y usarlos para la gloria de Dios."
+>
+  We exist to provide students with the opportunity to learn music in a Christ-centered environment, regardless of their financial situation. We believe that every student with a desire to learn should be given the chance to grow, develop their gifts, and use them for God’s glory.
+</p>
+            <p
+  data-en="Our goal is not only to teach music, but to invest in each student’s life — building confidence, discipline, and a heart for worship. Through patient instruction and genuine care, we strive to create an environment where students feel encouraged, supported, and inspired."
+  data-es="Nuestra meta no es solo enseñar música, sino invertir en la vida de cada estudiante, desarrollando confianza, disciplina y un corazón para la adoración. A través de una enseñanza paciente y un cuidado genuino, buscamos crear un ambiente donde los estudiantes se sientan animados, apoyados e inspirados."
+>
+  Our goal is not only to teach music, but to invest in each student’s life — building confidence, discipline, and a heart for worship. Through patient instruction and genuine care, we strive to create an environment where students feel encouraged, supported, and inspired.
+</p>
             <p>
-              We exist to provide students with the opportunity to learn music in a Christ-centered environment, regardless of their financial situation. We believe that every student with a desire to learn should be given the chance to grow, develop their gifts, and use them for God’s glory.
-            </p>
-            <p>
-              Our goal is not only to teach music, but to invest in each student’s life — building confidence, discipline, and a heart for worship. Through patient instruction and genuine care, we strive to create an environment where students feel encouraged, supported, and inspired.
-            </p>
-            <p>
-              <br><strong>We are committed to raising up a generation that will use their gifts to glorify God and serve others through music.</strong>
-            </p>
+  <br>
+  <strong
+    data-en="We are committed to raising up a generation that will use their gifts to glorify God and serve others through music."
+    data-es="Estamos comprometidos a levantar una generación que use sus dones para glorificar a Dios y servir a otros por medio de la música."
+  >
+    We are committed to raising up a generation that will use their gifts to glorify God and serve others through music.
+  </strong>
+</p>
           </div>
 
           <div class="about__media">
@@ -116,10 +217,22 @@
     <!-- PARTNERS -->
 <section class="section partners" aria-labelledby="partners-title">
   <div class="container">
-    <h2 class="section__title" id="partners-title">Partners</h2>
-    <p class="section__subtitle">
-      We are grateful for partners who support the mission of Bloodworth Music Ministries through generosity, encouragement, and shared vision.
-    </p>
+    <h2
+  class="section__title"
+  id="partners-title"
+  data-en="Partners"
+  data-es="Colaboradores"
+>
+  Partners
+</h2>
+
+<p
+  class="section__subtitle"
+  data-en="We are grateful for partners who support the mission of Bloodworth Music Ministries through generosity, encouragement, and shared vision."
+  data-es="Estamos agradecidos por los colaboradores que apoyan la misión de Bloodworth Music Ministries por medio de su generosidad, ánimo y visión compartida."
+>
+  We are grateful for partners who support the mission of Bloodworth Music Ministries through generosity, encouragement, and shared vision.
+</p>
 
     <div class="logo-grid" aria-label="Partner list">
       <article class="logo-card">
@@ -189,13 +302,24 @@
     <!-- SPONSORS / DONORS -->
     <section class="section donors" id="donate" aria-labelledby="donors-title">
   <div class="container">
-    <h2 class="section__title" id="donors-title">Sponsors & Donors</h2>
+    <h2
+  class="section__title"
+  id="donors-title"
+  data-en="Sponsors & Donors"
+  data-es="Patrocinadores y Donantes"
+>
+  Sponsors & Donors
+</h2>
 
     <div class="two-col two-col--start">
       <div>
-        <p class="section__subtitle">
-          We are thankful for the community partners who help make this ministry possible through their generosity and support.
-        </p>
+        <p
+  class="section__subtitle"
+  data-en="We are thankful for the community partners who help make this ministry possible through their generosity and support."
+  data-es="Estamos agradecidos por los colaboradores de la comunidad que ayudan a hacer posible este ministerio por medio de su generosidad y apoyo."
+>
+  We are thankful for the community partners who help make this ministry possible through their generosity and support.
+</p>
 
         <div class="logo-grid" aria-label="Sponsor businesses list">
   <article class="logo-card">
@@ -219,28 +343,67 @@
       </div>
 
           <aside class="card card--accent">
-            <h3 class="card__title">What it means to be a donor</h3>
-            <p class="card__text">
-              Your generosity gives a student the opportunity they may never have had, the chance to learn music, grow in confidence, and use their gifts to glorify God.
-            </p>
-            <p class="card__text">
-              Many of our students have the desire, the passion, and the willingness to learn… but not always the resources. Because of you, they are placed in front of caring, committed instructors who don’t just teach music, they invest in lives.
-            </p>
-            <p class="card__text">
-              Every donation helps provide instruments, lessons, and a Christ-centered environment where students are encouraged, supported, and reminded that their gifts have purpose.
-            </p>
-            <p class="card__text">
-              This is more than a lesson.<br>
-              <strong>This is discipleship through music.</strong>
-            </p>
-            <p class="card__text">
-              When you give, you’re not just supporting a program,
-              you’re helping shape a life that can worship, serve, and impact others for God’s glory.
-            </p>
+            <h3
+  class="card__title"
+  data-en="What it means to be a donor"
+  data-es="Lo que significa ser donante"
+>
+  What it means to be a donor
+</h3>
 
-            <a class="button button--secondary" href="./pages/donate.html">
-              Become a Donor
-            </a>
+<p
+  class="card__text"
+  data-en="Your generosity gives a student the opportunity they may never have had, the chance to learn music, grow in confidence, and use their gifts to glorify God."
+  data-es="Su generosidad le da a un estudiante una oportunidad que quizás nunca haya tenido: la oportunidad de aprender música, crecer en confianza y usar sus dones para glorificar a Dios."
+>
+  Your generosity gives a student the opportunity they may never have had, the chance to learn music, grow in confidence, and use their gifts to glorify God.
+</p>
+            <p
+  class="card__text"
+  data-en="Many of our students have the desire, the passion, and the willingness to learn… but not always the resources. Because of you, they are placed in front of caring, committed instructors who don’t just teach music, they invest in lives."
+  data-es="Muchos de nuestros estudiantes tienen el deseo, la pasión y la disposición de aprender… pero no siempre cuentan con los recursos. Gracias a usted, ellos pueden recibir enseñanza de instructores dedicados y comprometidos que no solo enseñan música, sino que invierten en vidas."
+>
+  Many of our students have the desire, the passion, and the willingness to learn… but not always the resources. Because of you, they are placed in front of caring, committed instructors who don’t just teach music, they invest in lives.
+</p>
+            <p
+  class="card__text"
+  data-en="Every donation helps provide instruments, lessons, and a Christ-centered environment where students are encouraged, supported, and reminded that their gifts have purpose."
+  data-es="Cada donación ayuda a proveer instrumentos, clases y un ambiente centrado en Cristo donde los estudiantes son animados, apoyados y recordados de que sus dones tienen propósito."
+>
+  Every donation helps provide instruments, lessons, and a Christ-centered environment where students are encouraged, supported, and reminded that their gifts have purpose.
+</p>
+            <p class="card__text">
+  <span
+    data-en="This is more than a lesson."
+    data-es="Esto es más que una clase."
+  >
+    This is more than a lesson.
+  </span>
+  <br>
+  <strong
+    data-en="This is discipleship through music."
+    data-es="Esto es discipulado por medio de la música."
+  >
+    This is discipleship through music.
+  </strong>
+</p>
+            <p
+  class="card__text"
+  data-en="When you give, you’re not just supporting a program, you’re helping shape a life that can worship, serve, and impact others for God’s glory."
+  data-es="Cuando usted da, no solo está apoyando un programa; está ayudando a formar una vida que puede adorar, servir e impactar a otros para la gloria de Dios."
+>
+  When you give, you’re not just supporting a program,
+  you’re helping shape a life that can worship, serve, and impact others for God’s glory.
+</p>
+
+<a
+  class="button button--secondary"
+  href="./pages/donate.html"
+  data-en="Become a Donor"
+  data-es="Convertirse en Donante"
+>
+  Become a Donor
+</a>
           </aside>
         </div>
       </div>
@@ -249,19 +412,40 @@
     <!-- CONTACT -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
-        <h2 class="section__title" id="contact-title">Contact Us</h2>
+        <h2
+  class="section__title"
+  id="contact-title"
+  data-en="Contact Us"
+  data-es="Contáctenos"
+>
+  Contact Us
+</h2>
 
         <div class="card">
-          <p>
-            We would love to connect with you, answer your questions, and share more about how Bloodworth Music Ministries is serving students through Christ-centered music instruction.
-          </p>
-          <p>
-            Whether you are interested in lessons, partnering with us, becoming a donor, or learning more about our mission, we welcome the opportunity to hear from you.
-          </p>
-          <p>
-            Email: bloodworthmusic@proton.me
-          </p>
-        </div>
+  <p
+    data-en="We would love to connect with you, answer your questions, and share more about how Bloodworth Music Ministries is serving students through Christ-centered music instruction."
+    data-es="Nos encantaría comunicarnos con usted, responder sus preguntas y compartir más sobre cómo Bloodworth Music Ministries está sirviendo a los estudiantes por medio de enseñanza musical centrada en Cristo."
+  >
+    We would love to connect with you, answer your questions, and share more about how Bloodworth Music Ministries is serving students through Christ-centered music instruction.
+  </p>
+
+  <p
+    data-en="Whether you are interested in lessons, partnering with us, becoming a donor, or learning more about our mission, we welcome the opportunity to hear from you."
+    data-es="Ya sea que esté interesado en clases, colaborar con nosotros, convertirse en donante o aprender más sobre nuestra misión, nos encantaría tener la oportunidad de saber de usted."
+  >
+    Whether you are interested in lessons, partnering with us, becoming a donor, or learning more about our mission, we welcome the opportunity to hear from you.
+  </p>
+
+  <p>
+    <span
+      data-en="Email:"
+      data-es="Correo electrónico:"
+    >
+      Email:
+    </span>
+    bloodworthmusic@proton.me
+  </p>
+</div>
       </div>
     </section>
   </main>
@@ -276,27 +460,74 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-    const menuButton = document.querySelector(".menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const mobileLinks = document.querySelectorAll(".mobile-menu__link");
+  const menuButton = document.querySelector(".menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileLinks = document.querySelectorAll(".mobile-menu__link");
 
-    menuButton.addEventListener("click", () => {
-      const isOpen = mobileMenu.classList.toggle("is-open");
-      menuButton.classList.toggle("is-active", isOpen);
-      menuButton.setAttribute("aria-expanded", isOpen);
-      menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  const languageToggle = document.getElementById("languageToggle");
+  const mobileLanguageToggle = document.getElementById("mobileLanguageToggle");
+  const translatableElements = document.querySelectorAll("[data-en][data-es]");
+
+  function setLanguage(language) {
+    translatableElements.forEach((element) => {
+      const translatedText = element.getAttribute(`data-${language}`);
+
+      if (translatedText) {
+        element.textContent = translatedText;
+      }
     });
 
-    mobileLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.remove("is-open");
-        menuButton.classList.remove("is-active");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.setAttribute("aria-label", "Open menu");
-      });
+    document.documentElement.lang = language === "es" ? "es" : "en";
+    localStorage.setItem("siteLanguage", language);
+
+    const nextLabel = language === "es" ? "English" : "Español";
+    const ariaLabel = language === "es" ? "Switch to English" : "Switch to Spanish";
+
+    if (languageToggle) {
+      languageToggle.textContent = nextLabel;
+      languageToggle.setAttribute("aria-label", ariaLabel);
+    }
+
+    if (mobileLanguageToggle) {
+      mobileLanguageToggle.textContent = nextLabel;
+      mobileLanguageToggle.setAttribute("aria-label", ariaLabel);
+    }
+  }
+
+  function toggleLanguage() {
+    const currentLanguage = localStorage.getItem("siteLanguage") || "en";
+    const newLanguage = currentLanguage === "en" ? "es" : "en";
+    setLanguage(newLanguage);
+  }
+
+  if (languageToggle) {
+    languageToggle.addEventListener("click", toggleLanguage);
+  }
+
+  if (mobileLanguageToggle) {
+    mobileLanguageToggle.addEventListener("click", toggleLanguage);
+  }
+
+  const savedLanguage = localStorage.getItem("siteLanguage") || "en";
+  setLanguage(savedLanguage);
+
+  menuButton.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("is-open");
+    menuButton.classList.toggle("is-active", isOpen);
+    menuButton.setAttribute("aria-expanded", isOpen);
+    menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+
+  mobileLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("is-open");
+      menuButton.classList.remove("is-active");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open menu");
     });
-  </script>
+  });
+</script>
 </body>
 </html>
