@@ -14,34 +14,158 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="../css/donate-instrument.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/donate-instrument.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Bloodworth Ministry home">
-  <a class="brand" href="#top" aria-label="Bloodworth Music Ministries home">
-        <span class="brand__name">Bloodworth Music Ministries</span>
-      </a>
-      <nav class="header-nav" aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-        <a href="../index.html#About">About</a>
-        <a href="../index.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <!-- HEADER -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="../index.html" aria-label="Bloodworth Music Ministries home">
+      <span class="brand__name">Bloodworth Music Ministries</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul class="site-nav__list">
+        <li>
+          <a class="site-nav__link" href="../index.html#about" data-en="About" data-es="Acerca de">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a class="site-nav__link" href="../pages/donate.html" data-en="Donate" data-es="Donar">
+            Donate
+          </a>
+        </li>
+
+        <li>
+          <a class="site-nav__link" href="../index.html#contact" data-en="Contact Us" data-es="Contáctenos">
+            Contact Us
+          </a>
+        </li>
+
+        <li>
+          <a class="site-nav__link site-nav__link--active" href="../pages/donate-instrument.html" data-en="Donate Instrument" data-es="Donar Instrumento">
+            Donate Instrument
+          </a>
+        </li>
+
+        <li>
+          <a class="site-nav__link" href="../pages/student-interest.html" data-en="Apply" data-es="Aplicar">
+            Apply
+          </a>
+        </li>
+
+        <li>
+          <button
+            class="language-toggle"
+            id="languageToggle"
+            type="button"
+            aria-label="Switch to Spanish"
+          >
+            Español
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="menu-button__bar"></span>
+      <span class="menu-button__bar"></span>
+      <span class="menu-button__bar"></span>
+    </button>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <ul class="mobile-menu__list">
+      <li>
+        <a class="mobile-menu__link" href="../index.html#about" data-en="About" data-es="Acerca de">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a class="mobile-menu__link" href="../pages/donate.html" data-en="Donate" data-es="Donar">
+          Donate
+        </a>
+      </li>
+
+      <li>
+        <a class="mobile-menu__link" href="../index.html#contact" data-en="Contact Us" data-es="Contáctenos">
+          Contact Us
+        </a>
+      </li>
+
+      <li>
+        <a class="mobile-menu__link" href="../pages/donate-instrument.html" data-en="Donate Instrument" data-es="Donar Instrumento">
+          Donate Instrument
+        </a>
+      </li>
+
+      <li>
+        <a class="mobile-menu__link" href="../pages/student-interest.html" data-en="Apply" data-es="Aplicar">
+          Apply
+        </a>
+      </li>
+
+      <li>
+        <button
+          class="language-toggle language-toggle--mobile"
+          id="mobileLanguageToggle"
+          type="button"
+          aria-label="Switch to Spanish"
+        >
+          Español
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
 
   <main>
     <section class="hero">
       <div class="container hero-inner">
-        <p class="eyebrow">In-Kind Giving</p>
-        <h1>Give the Gift of Music</h1>
-        <p class="hero-text">
-          Thank you for your interest in donating a musical instrument or related
-          equipment. Complete the form below to help support community music
-          programs and expand access to music education.
-        </p>
-        <a class="hero-button" href="#donation-form">Go to Donation Form</a>
+        <p
+  class="eyebrow"
+  data-en="In-Kind Giving"
+  data-es="Donación en Especie"
+>
+  In-Kind Giving
+</p>
+
+<h1
+  data-en="Give the Gift of Music"
+  data-es="Regale el Don de la Música"
+>
+  Give the Gift of Music
+</h1>
+
+<p
+  class="hero-text"
+  data-en="Thank you for your interest in donating a musical instrument or related equipment. Complete the form below to help support community music programs and expand access to music education."
+  data-es="Gracias por su interés en donar un instrumento musical o equipo relacionado. Complete el formulario a continuación para ayudar a apoyar los programas musicales de la comunidad y ampliar el acceso a la educación musical."
+>
+  Thank you for your interest in donating a musical instrument or related
+  equipment. Complete the form below to help support community music
+  programs and expand access to music education.
+</p>
+
+<a
+  class="hero-button"
+  href="#donation-form"
+  data-en="Go to Donation Form"
+  data-es="Ir al Formulario de Donación"
+>
+  Go to Donation Form
+</a>
       </div>
     </section>
 
@@ -49,34 +173,143 @@
       <div class="container">
         <div class="section-card">
           <div class="section-copy">
-            <h2>Musical Instrument Donation Form</h2>
-            <p>
-              Please complete the form below with as much detail as possible. A
-              member of our team will review your submission and follow up with
-              next steps.
-            </p>
-          </div>
+  <h2
+    data-en="Musical Instrument Donation Form"
+    data-es="Formulario para Donar un Instrumento Musical"
+  >
+    Musical Instrument Donation Form
+  </h2>
 
-          <div class="form-wrap">
-            <iframe
-              title="Musical Instrument Donation Form"
-              src="https://form.jotform.com/260881361117051"
-              loading="lazy"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
+  <p
+    data-en="Please complete the form below with as much detail as possible. A member of our team will review your submission and follow up with next steps."
+    data-es="Por favor complete el formulario a continuación con la mayor cantidad de detalles posible. Un miembro de nuestro equipo revisará su envío y se comunicará con usted con los próximos pasos."
+  >
+    Please complete the form below with as much detail as possible. A
+    member of our team will review your submission and follow up with
+    next steps.
+  </p>
+</div>
+
+          <iframe
+  class="language-iframe"
+  title="Musical Instrument Donation Form"
+  src="https://form.jotform.com/260881361117051"
+  data-src-en="https://form.jotform.com/260881361117051"
+  data-src-es="https://form.jotform.com/261185614770156"
+  loading="lazy"
+  frameborder="0"
+  allowfullscreen
+></iframe>
 
           <div class="support-note">
-            <h3>Need help?</h3>
-            <p>
-              If you have questions about your donation before submitting the
-              form,<br>Please contact: bloodworthmusic@proton.me
-            </p>
-          </div>
+  <h3
+    data-en="Need help?"
+    data-es="¿Necesita ayuda?"
+  >
+    Need help?
+  </h3>
+
+  <p>
+    <span
+      data-en="If you have questions about your donation before submitting the form,"
+      data-es="Si tiene preguntas sobre su donación antes de enviar el formulario,"
+    >
+      If you have questions about your donation before submitting the form,
+    </span>
+    <br>
+    <span
+      data-en="Please contact:"
+      data-es="Por favor comuníquese con:"
+    >
+      Please contact:
+    </span>
+    bloodworthmusic@proton.me
+  </p>
+</div>
         </div>
       </div>
     </section>
   </main>
+ <script>
+  const menuButton = document.querySelector(".menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileLinks = document.querySelectorAll(".mobile-menu__link");
+
+  const languageToggle = document.getElementById("languageToggle");
+  const mobileLanguageToggle = document.getElementById("mobileLanguageToggle");
+  const translatableElements = document.querySelectorAll("[data-en][data-es]");
+  const languageIframes = document.querySelectorAll("[data-src-en][data-src-es]");
+
+  function setLanguage(language) {
+    translatableElements.forEach((element) => {
+      const translatedText = element.getAttribute(`data-${language}`);
+
+      if (translatedText) {
+        element.textContent = translatedText;
+      }
+    });
+
+    languageIframes.forEach((iframe) => {
+      const newSrc = iframe.getAttribute(`data-src-${language}`);
+
+      if (newSrc && iframe.src !== newSrc) {
+        iframe.src = newSrc;
+      }
+    });
+
+    document.documentElement.lang = language === "es" ? "es" : "en";
+    localStorage.setItem("siteLanguage", language);
+
+    const nextLabel = language === "es" ? "English" : "Español";
+    const ariaLabel = language === "es" ? "Switch to English" : "Switch to Spanish";
+
+    if (languageToggle) {
+      languageToggle.textContent = nextLabel;
+      languageToggle.setAttribute("aria-label", ariaLabel);
+    }
+
+    if (mobileLanguageToggle) {
+      mobileLanguageToggle.textContent = nextLabel;
+      mobileLanguageToggle.setAttribute("aria-label", ariaLabel);
+    }
+  }
+
+  function toggleLanguage() {
+    const currentLanguage = localStorage.getItem("siteLanguage") || "en";
+    const newLanguage = currentLanguage === "en" ? "es" : "en";
+    setLanguage(newLanguage);
+  }
+
+  if (languageToggle) {
+    languageToggle.addEventListener("click", toggleLanguage);
+  }
+
+  if (mobileLanguageToggle) {
+    mobileLanguageToggle.addEventListener("click", toggleLanguage);
+  }
+
+  const savedLanguage = localStorage.getItem("siteLanguage") || "en";
+  setLanguage(savedLanguage);
+
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("is-open");
+      menuButton.classList.toggle("is-active", isOpen);
+      menuButton.setAttribute("aria-expanded", isOpen);
+      menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    });
+  }
+
+  mobileLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (mobileMenu && menuButton) {
+        mobileMenu.classList.remove("is-open");
+        menuButton.classList.remove("is-active");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open menu");
+      }
+    });
+  });
+</script>
 </body>
 </html>
