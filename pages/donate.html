@@ -415,10 +415,15 @@
 
         <div class="donation-poster-card">
           <img
-            class="donation-poster-card__image"
-            src="../assets/support-music-education-and-ministry.jpg"
-            alt="Make a Musical Impact donation poster showing how gifts of $10, $25, $50, and $100 support music lessons, supplies, instruction, and ministry outreach."
-          />
+  class="donation-poster-card__image"
+  id="donationPosterImage"
+  src="../assets/support-music-education-and-ministry.jpg"
+  data-src-en="../assets/support-music-education-and-ministry.jpg"
+  data-src-es="../assets/support-music-education-and-ministry-sp.jpg"
+  data-alt-en="Make a Musical Impact sponsorship poster showing monthly sponsor tiers for Standing Piano, Baby Grand, and Grand Piano support."
+  data-alt-es="Cartel en español de Cause un Impacto Musical que muestra niveles mensuales de patrocinio para Piano Vertical, Media Cola y Gran Piano."
+  alt="Make a Musical Impact sponsorship poster showing monthly sponsor tiers for Standing Piano, Baby Grand, and Grand Piano support."
+/>
         </div>
 
         <div class="donation-poster-cta">
@@ -454,60 +459,76 @@
   <script type="module" src="https://donorbox.org/widgets.js" async></script>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-    const menuButton = document.querySelector(".menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const mobileLinks = document.querySelectorAll(".mobile-menu__link");
+  const menuButton = document.querySelector(".menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileLinks = document.querySelectorAll(".mobile-menu__link");
 
-    const languageToggle = document.getElementById("languageToggle");
-    const mobileLanguageToggle = document.getElementById("mobileLanguageToggle");
-    const translatableElements = document.querySelectorAll("[data-en][data-es]");
+  const languageToggle = document.getElementById("languageToggle");
+  const mobileLanguageToggle = document.getElementById("mobileLanguageToggle");
+  const translatableElements = document.querySelectorAll("[data-en][data-es]");
 
-    function setLanguage(language) {
-      translatableElements.forEach((element) => {
-        const translatedText = element.getAttribute(`data-${language}`);
+  const donationPosterImage = document.getElementById("donationPosterImage");
 
-        if (translatedText) {
-          element.textContent = translatedText;
-        }
-      });
+  function setLanguage(language) {
+    translatableElements.forEach((element) => {
+      const translatedText = element.getAttribute(`data-${language}`);
 
-      document.documentElement.lang = language === "es" ? "es" : "en";
-      localStorage.setItem("siteLanguage", language);
+      if (translatedText) {
+        element.textContent = translatedText;
+      }
+    });
 
-      const nextLabel = language === "es" ? "English" : "Español";
-      const ariaLabel = language === "es" ? "Switch to English" : "Switch to Spanish";
+    if (donationPosterImage) {
+      const newPosterSrc = donationPosterImage.getAttribute(`data-src-${language}`);
+      const newPosterAlt = donationPosterImage.getAttribute(`data-alt-${language}`);
 
-      if (languageToggle) {
-        languageToggle.textContent = nextLabel;
-        languageToggle.setAttribute("aria-label", ariaLabel);
+      if (newPosterSrc) {
+        donationPosterImage.src = newPosterSrc;
       }
 
-      if (mobileLanguageToggle) {
-        mobileLanguageToggle.textContent = nextLabel;
-        mobileLanguageToggle.setAttribute("aria-label", ariaLabel);
+      if (newPosterAlt) {
+        donationPosterImage.alt = newPosterAlt;
       }
     }
 
-    function toggleLanguage() {
-      const currentLanguage = localStorage.getItem("siteLanguage") || "en";
-      const newLanguage = currentLanguage === "en" ? "es" : "en";
+    document.documentElement.lang = language === "es" ? "es" : "en";
+    localStorage.setItem("siteLanguage", language);
 
-      setLanguage(newLanguage);
-    }
+    const nextLabel = language === "es" ? "English" : "Español";
+    const ariaLabel = language === "es" ? "Switch to English" : "Switch to Spanish";
 
     if (languageToggle) {
-      languageToggle.addEventListener("click", toggleLanguage);
+      languageToggle.textContent = nextLabel;
+      languageToggle.setAttribute("aria-label", ariaLabel);
     }
 
     if (mobileLanguageToggle) {
-      mobileLanguageToggle.addEventListener("click", toggleLanguage);
+      mobileLanguageToggle.textContent = nextLabel;
+      mobileLanguageToggle.setAttribute("aria-label", ariaLabel);
     }
+  }
 
-    const savedLanguage = localStorage.getItem("siteLanguage") || "en";
-    setLanguage(savedLanguage);
+  function toggleLanguage() {
+    const currentLanguage = localStorage.getItem("siteLanguage") || "en";
+    const newLanguage = currentLanguage === "en" ? "es" : "en";
 
+    setLanguage(newLanguage);
+  }
+
+  if (languageToggle) {
+    languageToggle.addEventListener("click", toggleLanguage);
+  }
+
+  if (mobileLanguageToggle) {
+    mobileLanguageToggle.addEventListener("click", toggleLanguage);
+  }
+
+  const savedLanguage = localStorage.getItem("siteLanguage") || "en";
+  setLanguage(savedLanguage);
+
+  if (menuButton && mobileMenu) {
     menuButton.addEventListener("click", () => {
       const isOpen = mobileMenu.classList.toggle("is-open");
 
@@ -515,15 +536,21 @@
       menuButton.setAttribute("aria-expanded", isOpen);
       menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
     });
+  }
 
-    mobileLinks.forEach((link) => {
-      link.addEventListener("click", () => {
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (mobileMenu) {
         mobileMenu.classList.remove("is-open");
+      }
+
+      if (menuButton) {
         menuButton.classList.remove("is-active");
         menuButton.setAttribute("aria-expanded", "false");
         menuButton.setAttribute("aria-label", "Open menu");
-      });
+      }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
