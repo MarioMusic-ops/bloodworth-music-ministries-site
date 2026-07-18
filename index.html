@@ -452,12 +452,16 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <small class="site-footer__copyright">
-        © <span id="year"></span> Bloodworth Music Ministries
-      </small>
-    </div>
-  </footer>
+  <div class="footer-content">
+    <p>&copy; 2026 Bloodworth Music Ministries. All rights reserved.</p>
+
+    <nav class="footer-legal" aria-label="Legal links">
+      <a href="pages/privacy.html">Privacy Policy</a>
+      <a href="pages/terms.html">Terms of Use</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </div>
+</footer>
 
   <script>
   document.getElementById("year").textContent = new Date().getFullYear();
