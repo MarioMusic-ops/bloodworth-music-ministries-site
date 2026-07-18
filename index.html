@@ -465,15 +465,24 @@
 </footer>
 
   <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  const yearElement = document.getElementById("year");
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
 
   const menuButton = document.querySelector(".menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileLinks = document.querySelectorAll(".mobile-menu__link");
 
   const languageToggle = document.getElementById("languageToggle");
-  const mobileLanguageToggle = document.getElementById("mobileLanguageToggle");
-  const translatableElements = document.querySelectorAll("[data-en][data-es]");
+  const mobileLanguageToggle = document.getElementById(
+    "mobileLanguageToggle"
+  );
+
+  const translatableElements = document.querySelectorAll(
+    "[data-en][data-es]"
+  );
 
   function setLanguage(language) {
     translatableElements.forEach((element) => {
@@ -488,7 +497,11 @@
     localStorage.setItem("siteLanguage", language);
 
     const nextLabel = language === "es" ? "English" : "Español";
-    const ariaLabel = language === "es" ? "Switch to English" : "Switch to Spanish";
+
+    const ariaLabel =
+      language === "es"
+        ? "Switch to English"
+        : "Switch to Spanish";
 
     if (languageToggle) {
       languageToggle.textContent = nextLabel;
@@ -502,8 +515,12 @@
   }
 
   function toggleLanguage() {
-    const currentLanguage = localStorage.getItem("siteLanguage") || "en";
-    const newLanguage = currentLanguage === "en" ? "es" : "en";
+    const currentLanguage =
+      localStorage.getItem("siteLanguage") || "en";
+
+    const newLanguage =
+      currentLanguage === "en" ? "es" : "en";
+
     setLanguage(newLanguage);
   }
 
@@ -515,24 +532,38 @@
     mobileLanguageToggle.addEventListener("click", toggleLanguage);
   }
 
-  const savedLanguage = localStorage.getItem("siteLanguage") || "en";
+  const savedLanguage =
+    localStorage.getItem("siteLanguage") || "en";
+
   setLanguage(savedLanguage);
 
-  menuButton.addEventListener("click", () => {
-    const isOpen = mobileMenu.classList.toggle("is-open");
-    menuButton.classList.toggle("is-active", isOpen);
-    menuButton.setAttribute("aria-expanded", isOpen);
-    menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-  });
+  function closeMobileMenu() {
+    if (!menuButton || !mobileMenu) {
+      return;
+    }
 
-  mobileLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.remove("is-open");
-      menuButton.classList.remove("is-active");
-      menuButton.setAttribute("aria-expanded", "false");
-      menuButton.setAttribute("aria-label", "Open menu");
+    mobileMenu.classList.remove("is-open");
+    menuButton.classList.remove("is-active");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open menu");
+  }
+
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("is-open");
+
+      menuButton.classList.toggle("is-active", isOpen);
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
     });
-  });
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+  }
 </script>
   <!-- force porkbun deploy May 3 -->
 </body>
