@@ -15,7 +15,537 @@
   <title>Praise &amp; Worship Concert — November 14, 2026 | Bloodworth Music Ministries</title>
 
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/events.css">
+  <style>
+
+/* ==========================================
+   BLOODWORTH MUSIC MINISTRIES
+   PRAISE & WORSHIP CONCERT EVENT PAGE
+   File: css/events.css
+   Mobile Responsive Design
+========================================== */
+
+/* GLOBAL EVENT PAGE */
+.bmm-events-page {
+  --bmm-burgundy: #6a1b1a;
+  --bmm-plum: #4a1f2d;
+  --bmm-gold: #c8a96b;
+  --bmm-ivory: #faf6f2;
+  --bmm-green: #293d32;
+
+  background: #faf6f2;
+  color: #30252b;
+  font-family: system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.bmm-events-page *,
+.bmm-events-page *::before,
+.bmm-events-page *::after {
+  box-sizing: border-box;
+}
+
+.bmm-events-page a {
+  color: inherit;
+}
+
+.bmm-events-page button {
+  font: inherit;
+}
+
+.bmm-container {
+  width: min(1140px, calc(100% - 42px));
+  margin-inline: auto;
+}
+
+/* ACCESSIBILITY */
+.bmm-skip {
+  position: absolute;
+  left: -1000vw;
+  top: auto;
+}
+
+.bmm-skip:focus {
+  left: 14px;
+  top: 14px;
+  z-index: 999;
+  background: #fff;
+  padding: 12px 18px;
+}
+
+/* ==========================================
+   HEADER AND NAVIGATION
+========================================== */
+
+.bmm-header {
+  background: #fff;
+  border-bottom: 1px solid #e8ded5;
+  box-shadow: 0 2px 18px #30151a0c;
+}
+
+.bmm-header__inner {
+  width: min(1200px, calc(100% - 42px));
+  margin: auto;
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.bmm-brand {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.12;
+  flex-shrink: 0;
+}
+
+.bmm-brand__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: 10px;
+  color: #8c7172;
+  font-weight: 700;
+}
+
+.bmm-brand__name {
+  font-family: Georgia, serif;
+  font-size: clamp(17px, 1.8vw, 23px);
+  color: var(--bmm-burgundy);
+  font-weight: 700;
+}
+
+.bmm-nav {
+  display: flex;
+  gap: 22px;
+  margin-left: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bmm-nav a {
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #50424b;
+  padding: 8px 0;
+}
+
+.bmm-nav a:hover,
+.bmm-nav a:focus-visible,
+.bmm-nav .bmm-nav__current {
+  color: var(--bmm-burgundy);
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+.bmm-language {
+  flex-shrink: 0;
+  border: 1px solid #d9c7c8;
+  background: #fff;
+  color: var(--bmm-burgundy);
+  border-radius: 22px;
+  padding: 8px 13px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.bmm-language:hover {
+  background: #faf1ec;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.bmm-event-hero {
+  background:
+    radial-gradient(
+      ellipse at 94% 5%,
+      #744541 0%,
+      transparent 37%
+    ),
+    linear-gradient(
+      120deg,
+      #491e2d,
+      #6a1b1a 85%
+    );
+
+  color: #fff;
+  padding: 75px 0 82px;
+  position: relative;
+}
+
+.bmm-event-hero__inner {
+  position: relative;
+}
+
+.bmm-eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .20em;
+  text-transform: uppercase;
+  color: #f7d7a2;
+  margin: 0 0 18px;
+}
+
+.bmm-event-hero h1 {
+  font-family: Georgia, Times, serif;
+  font-weight: 600;
+  font-size: clamp(38px, 5.1vw, 70px);
+  line-height: 1.08;
+  max-width: 780px;
+  margin: 0 0 22px;
+  letter-spacing: -.025em;
+}
+
+.bmm-event-hero__subtitle {
+  font-size: clamp(16px, 1.8vw, 19px);
+  max-width: 670px;
+  line-height: 1.65;
+  color: #f9e8e5;
+  margin: 0 0 29px;
+}
+
+.bmm-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.bmm-hero-tags span {
+  border: 1px solid #ffffff66;
+  background: #ffffff15;
+  color: #fff;
+  padding: 9px 15px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   MAIN EVENT LAYOUT
+========================================== */
+
+.bmm-event-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(290px, .9fr);
+
+  gap: 55px;
+  align-items: start;
+  padding-top: 63px;
+  padding-bottom: 92px;
+}
+
+.bmm-section-label {
+  font-size: 12px;
+  color: var(--bmm-burgundy);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .17em;
+  margin: 0 0 9px;
+}
+
+.bmm-event-body h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(26px, 3.4vw, 40px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--bmm-plum);
+  margin: 0 0 19px;
+  max-width: 630px;
+}
+
+.bmm-event-body > p:not(.bmm-section-label) {
+  font-size: 17px;
+  line-height: 1.83;
+  color: #5b5054;
+  max-width: 650px;
+  margin-bottom: 30px;
+}
+
+/* ==========================================
+   EVENT DETAIL CARDS
+========================================== */
+
+.bmm-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    minmax(0, 1fr)
+  );
+  gap: 15px;
+}
+
+.bmm-detail-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 21px 18px;
+  background: #fff;
+  border: 1px solid #ece3df;
+  border-radius: 15px;
+  box-shadow: 0 4px 17px #3a27300b;
+}
+
+.bmm-detail-card__icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  color: #835b24;
+  background: #f8efde;
+  font-size: 22px;
+}
+
+.bmm-detail-card h3 {
+  margin: 0 0 6px;
+  color: var(--bmm-plum);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.bmm-detail-card p {
+  margin: 0;
+  color: #62565c;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.bmm-detail-card__sub {
+  display: block;
+}
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.bmm-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 33px;
+}
+
+.bmm-button {
+  display: inline-block;
+  padding: 14px 21px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  transition:
+    transform .15s,
+    background .15s;
+}
+
+.bmm-button:hover {
+  transform: translateY(-2px);
+}
+
+.bmm-button--primary {
+  background: var(--bmm-burgundy);
+  color: #fff !important;
+}
+
+.bmm-button--primary:hover {
+  background: #4e1114;
+}
+
+.bmm-button--secondary {
+  border: 1px solid #a89494;
+  background: #fff;
+  color: var(--bmm-burgundy) !important;
+}
+
+/* ==========================================
+   ORIGINAL CONCERT FLYER
+========================================== */
+
+.bmm-poster-panel {
+  background: #fff;
+  padding: 17px;
+  border-radius: 17px;
+  border: 1px solid #eadedb;
+  box-shadow: 0 18px 45px #40202f16;
+  margin-top: -110px;
+  position: relative;
+}
+
+.bmm-poster-panel__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--bmm-green);
+  padding: 7px 5px 15px;
+}
+
+.bmm-poster-panel > a {
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #f0eadf;
+}
+
+.bmm-poster-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bmm-poster-panel > p {
+  text-align: center;
+  color: #72676a;
+  margin: 16px 0 7px;
+  font-size: 13px;
+}
+
+.bmm-copy-link {
+  display: block;
+  margin: 8px auto 0;
+  border: none;
+  background: transparent;
+  color: var(--bmm-burgundy);
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.bmm-poster-panel .bmm-copy-confirmation {
+  font-size: 12px;
+  margin: 4px 0 0;
+  min-height: 22px;
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.bmm-footer {
+  background: #37212b;
+  color: #f3e8e4;
+  padding: 27px 0;
+}
+
+.bmm-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.bmm-footer p {
+  margin: 0;
+}
+
+.bmm-footer a {
+  color: #f6d5a3;
+}
+
+/* ==========================================
+   TABLET RESPONSIVENESS
+   Screens 900px and below
+========================================== */
+
+@media (max-width: 900px) {
+
+  .bmm-header__inner {
+    flex-wrap: wrap;
+    padding: 15px 0;
+  }
+
+  .bmm-nav {
+    order: 3;
+    width: 100%;
+    margin: 0;
+    gap: 17px;
+  }
+
+  .bmm-language {
+    margin-left: auto;
+  }
+
+  .bmm-event-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .bmm-poster-panel {
+    margin-top: 0;
+    max-width: 480px;
+    justify-self: center;
+  }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+   Screens 560px and below
+========================================== */
+
+@media (max-width: 560px) {
+
+  .bmm-header__inner {
+    gap: 10px;
+  }
+
+  .bmm-brand__name {
+    font-size: 17px;
+  }
+
+  .bmm-nav {
+    gap: 13px;
+  }
+
+  .bmm-nav a {
+    font-size: 12px;
+  }
+
+  .bmm-container {
+    width: calc(100% - 32px);
+  }
+
+  .bmm-event-hero {
+    padding: 55px 0;
+  }
+
+  .bmm-event-layout {
+    padding-top: 42px;
+    padding-bottom: 54px;
+  }
+
+  .bmm-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bmm-cta-row .bmm-button {
+    width: 100%;
+  }
+}
+
+/* ACCESSIBILITY: REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+
+  .bmm-button {
+    transition: none;
+  }
+}
+
+</style>
 
   <script type="application/ld+json">
   {
